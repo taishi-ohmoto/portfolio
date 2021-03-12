@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <!-- レスポンシブ設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- このサイトは何か 説明する場所 -->
+    <meta name="description" content="テック太郎の自己紹介">
+    <!-- タイトルの設定 emmet -->
+    <title>PORTFOLIO</title>
+    <!-- スタイルシート -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <!--
+     / headerタグの作成
+     ・ロゴの設定をします
+     ・h1タグとaタグとimgタグを使っていきます
+    -->
+    <header>
+        
+        <!--
+         クラス名は分かりやすく、この箱はどういう箱なのか明確にする
+         h1 class="ポーちゃん"と名付けてもどんな箱なのか分からないので、NGです。
+        -->
+        <h1 class="block-header">
+            <a href="./index.html"><span class="color-green">P</span>ortfolio</a>
+        </h1>
+    </header>
+
+    <!--
+     / mainタグの作成
+     ・profile用とwork用の箱を作成する
+     ・divタグを使っていきます
+    -->
+    <div class="block-main">
+        <!--
+         / profile箱
+         ・クラス名はわかりやすいように！※pu-chanとか付けないように！
+        -->
+        <div class="box-profile">
+            <h2 class="sub-titile"><span class="color-green">P</span>rofile</h2>
+            <div class="item-list">
+                <img src="./img/profile.png" alt="プロフィール画像">
+                <b>テック　太郎</b>
+                <p>ここのテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            </div>
+            <ul class="icon-list">
+                <li>
+                    <a href="#">
+                        <img src="./img/insta.png" alt="インスタグラムアイコン">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/twitter.png" alt="ツイッターアイコン">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/facebook.png" alt="フェイスブックアイコン">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--
+         / work箱
+         ・クラス名はわかりやすいように！※wa-chanとか付けないように！
+        -->
+        <div class="box-works">
+            <h2 class="sub-titile"><span class="color-green">W</span>orks</h2>
+            <ul class="works-list">
+                <li>
+                    <img src="./img/work_1.jpg" alt="">
+                    <h3>交差点</h3>
+                    <span>2020.9.18</span>
+                </li>
+                <li>
+                    <img src="./img/work_2.jpg" alt="">
+                    <h3>Room</h3>
+                    <span>2020.9.18</span>
+                </li>
+                <li>
+                    <img src="./img/work_3.jpg" alt="">
+                    <h3>Blue</h3>
+                    <span>2020.9.18</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!--
+     / footerタグの作成
+     ・copyrightの設定
+     ・pタグを使います
+    -->
+    <footer class="block-footer">
+        <p>Copyright © TECH I.S., Inc.</p>
+    </footer>
+</body>
+</html>
