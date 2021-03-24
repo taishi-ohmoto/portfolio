@@ -1,0 +1,94 @@
+body{
+    font-family: YuGothic,'Yu Gothic',sans-serif;
+    background-image: url(img/back.png);
+    background-size: cover;
+}
+
+.header{
+    box-shadow: #ccc 0 0px 7px;
+    background-color: #fff;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo{
+    width: 191px;
+}
+
+.logo img{
+    width: 100%;
+    margin: 15px;
+}
+
+.main-wrapper{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 160px;
+}
+
+.title-wrapper{
+    text-align: center;
+}
+
+.title-wrapper h1{
+    font-weight: 700;
+}
+
+.hp-item{
+    display: flex;
+    padding: 80px 0;
+}
+
+.hp-img{
+    width: 60%;
+    box-shadow: 0 0 8px gray;
+}
+
+.hp-img img{
+    width: 100%;
+}
+
+.hp-sentence{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.hp-lv{
+    color: #00abae;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hp-txt-b{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.button{
+    border: 1px solid #00abae;
+    background: #00abae;
+    height: 55px;
+    border-radius: 30px;
+    position: relative;
+    transition: background-color 1s;
+}
+
+.button p{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+}
+
+.button:hover{
+    background: #6cd9db;
+    border: 1px solid #6cd9db;
+}
