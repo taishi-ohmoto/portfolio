@@ -4,8 +4,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <?php wp_head(); ?>
-
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 </head>
 
@@ -14,16 +13,17 @@
         <!--インナー-->
         <div class="header__inner">
             <!--ロゴ画像-->
-            <a href="<?php bloginfo('url'); ?>">
-                <img class="header__logo" src="<?php bloginfo('template_url'); ?>/img/logo.png">
+            <a href="./index.html">
+                <img class="header__logo" src="./img/logo.png">
             </a>
             <!--ナビ欄-->
             <div id="nav" class="header__navgroup">
                 <!--ナビ-->
-                <div class="header__navitem"><a href="<?php bloginfo('url'); ?>#about">About</a></div>
-                <div class="header__navitem"><a href="<?php bloginfo('url'); ?>#service">Service</a></div>
-                <div class="header__navitem"><a href="<?php bloginfo('url'); ?>#news">News</a></div>
-                <div class="header__navitem header__contact"><i class="fas fa-file-signature"></i>Contact<a class="a__btn" href="<?php bloginfo('url'); ?>/contact"></a></div>
+                <div class="header__navitem"><a href="./index.html#about">About</a></div>
+                <div class="header__navitem"><a href="./index.html#service">Service</a></div>
+                <div class="header__navitem"><a href="./index.html#news">News</a></div>
+                <div class="header__navitem header__contact"><i class="fas fa-file-signature"></i>Contact<a
+                        class="a__btn" href="./contact.html"></a></div>
             </div>
             <!--モーダル-->
             <div id="hamburger__modal" class="hamburger__modal"></div>
@@ -37,7 +37,7 @@
                 nav.classList.add('hamburger'); // クラス「hamburger」を追加
             }
             // 横幅が変わったとき実行される関数
-            window.addEventListener("resize", function() {
+            window.addEventListener("resize", function () {
                 // 現在と前回の横幅が違う場合だけ実行
                 if (lastInnerWidth != document.documentElement.clientWidth) {
                     // 横幅を記録しておく
@@ -53,13 +53,13 @@
             });
 
             //ハンバーガーメニューボタンをクリックしたときに実行される関数
-            document.getElementById('hamburger__btn').addEventListener('click', function() {
+            document.getElementById('hamburger__btn').addEventListener('click', function () {
                 //ナビ一覧とモーダルを表示
                 nav.style.display = "block";
                 document.getElementById('hamburger__modal').style.display = "block";
             });
             //ハンバーガーメニューが表示されてるときに、モーダルがクリックされると実行される関数
-            document.getElementById('hamburger__modal').addEventListener('click', function() {
+            document.getElementById('hamburger__modal').addEventListener('click', function () {
                 //ナビ一覧とモーダルを非表示
                 nav.style.display = "none";
                 document.getElementById('hamburger__modal').style.display = "none";
@@ -67,3 +67,59 @@
         </script>
     </header>
     <div class="main">
+
+
+        <!-- 記事ヘッダー -->
+        <div class="page__header">
+            <!-- アイキャッチ画像 -->
+            <img src="./img/contact_page.png" alt="">
+            <!-- タイトル -->
+            <div class="page__header__title">
+                タイトルタイトルタイトルタイトルタイトルタイトル
+                <div class="page__header__border"></div>
+            </div>
+
+        </div>
+
+        <!-- 本文 -->
+        <article class="article">
+            <div class="ContactForm7__contact">
+
+                <div class="ContactForm7__contact__title">
+                    お問い合わせフォーム
+                </div>
+
+                <div class="ContactForm7__contact__label">
+                    お名前<span>必須</span>
+                </div>
+                <input type="text">
+
+                <div class="ContactForm7__contact__label">
+                    メールアドレス<span>必須</span>
+                </div>
+                <input type="text">
+
+                <div class="ContactForm7__contact__label">
+                    お問い合わせ内容<span>必須</span>
+                </div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                <div class="ContactForm7__contact__submit">
+                    <input type="submit" value="送信">
+                </div>
+
+            </div>
+        </article>
+
+
+    </div>
+    <footer>
+        <!--PC用フッター画像-->
+        <img class="footer__img__pc" src="./img/footer_pc.png" alt="">
+        <!--スマホ用フッター画像-->
+        <img class="footer__img__sp" src="./img/footer_sp.png" alt="">
+    </footer>
+
+</body>
+
+</html>
