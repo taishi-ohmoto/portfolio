@@ -1,125 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ja">
 <head>
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>プログラミングスクール テックアイエス</title>
 </head>
-
 <body>
-    <header>
-        <!--インナー-->
-        <div class="header__inner">
-            <!--ロゴ画像-->
-            <a href="./index.html">
-                <img class="header__logo" src="./img/logo.png">
+    <header class="header">
+        <h1 class="logo">
+            <a href="http://localhost/techis_wordpress">
+                <img src="http://localhost/techis_wordpress/wp-content/themes/techis_wordpress_fixed/img/logo.png" alt="ロゴ画像">
             </a>
-            <!--ナビ欄-->
-            <div id="nav" class="header__navgroup">
-                <!--ナビ-->
-                <div class="header__navitem"><a href="./index.html#about">About</a></div>
-                <div class="header__navitem"><a href="./index.html#service">Service</a></div>
-                <div class="header__navitem"><a href="./index.html#news">News</a></div>
-                <div class="header__navitem header__contact"><i class="fas fa-file-signature"></i>Contact<a
-                        class="a__btn" href="./contact.html"></a></div>
-            </div>
-            <!--モーダル-->
-            <div id="hamburger__modal" class="hamburger__modal"></div>
-            <!--ハンバーガーメニューボタン-->
-            <div id="hamburger__btn" class="hamburger__btn"><i class="fas fa-bars"></i></div>
+        </h1>
+        <ul class="menu-pc">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">News</a></li>
+            <!-- リンク先追加 -->
+            <li><a href="contact"><i class="fas fa-file-signature"></i>Contact</a></li>
+        </ul>
+        
+        <!-- 追加 -->
+        <div id="btn" class="hamburger__btn">
+            <i class="fas fa-bars"></i>
         </div>
-        <script>
-            var lastInnerWidth = document.documentElement.clientWidth; //window.innerWidthで現在の画面幅を取得
-            var nav = document.getElementById('nav');
-            if (lastInnerWidth <= 480) { // 画面幅480px以下の場合
-                nav.classList.add('hamburger'); // クラス「hamburger」を追加
-            }
-            // 横幅が変わったとき実行される関数
-            window.addEventListener("resize", function () {
-                // 現在と前回の横幅が違う場合だけ実行
-                if (lastInnerWidth != document.documentElement.clientWidth) {
-                    // 横幅を記録しておく
-                    lastInnerWidth = document.documentElement.clientWidth;
-                    if (lastInnerWidth <= 480) { // 画面幅480px以下の場合
-                        if (!(nav.classList.contains('hamburger'))) { //クラス「hamburger」がない場合
-                            nav.classList.add('hamburger'); // クラス「hamburger」を追加
-                        }
-                    } else { // 画面幅481px以上の場合
-                        nav.classList.remove('hamburger'); //クラス「hamburger」を削除
-                    }
-                }
-            });
-
-            //ハンバーガーメニューボタンをクリックしたときに実行される関数
-            document.getElementById('hamburger__btn').addEventListener('click', function () {
-                //ナビ一覧とモーダルを表示
-                nav.style.display = "block";
-                document.getElementById('hamburger__modal').style.display = "block";
-            });
-            //ハンバーガーメニューが表示されてるときに、モーダルがクリックされると実行される関数
-            document.getElementById('hamburger__modal').addEventListener('click', function () {
-                //ナビ一覧とモーダルを非表示
-                nav.style.display = "none";
-                document.getElementById('hamburger__modal').style.display = "none";
-            });
-        </script>
-    </header>
-    <div class="main">
-
-
-        <!-- 記事ヘッダー -->
-        <div class="page__header">
-            <!-- アイキャッチ画像 -->
-            <img src="./img/contact_page.png" alt="">
-            <!-- タイトル -->
-            <div class="page__header__title">
-                タイトルタイトルタイトルタイトルタイトルタイトル
-                <div class="page__header__border"></div>
-            </div>
-
+        <ul id="menu" class="menu-sp"><!-- add-menu-sp 追加 -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#"><i class="fas fa-file-signature"></i>Contact</a></li>
+        </ul>
+        <div id="modal" class="modal-sp"></div><!-- add-modal-sp 追加 -->
+        <!-- 追加 -->
+    </header>        <!-- 記事ヘッダー -->
+    <div class="page-parts__header">
+        <!-- 画像 -->
+        <img width="375" height="207" src="http://localhost/techis_wordpress/wp-content/uploads/2022/04/page.png" class="attachment-full size-full wp-post-image" alt="" srcset="http://localhost/techis_wordpress/wp-content/uploads/2022/04/page.png 375w, http://localhost/techis_wordpress/wp-content/uploads/2022/04/page-300x166.png 300w" sizes="(max-width: 375px) 100vw, 375px" />        <!-- タイトル -->
+        <div class="page-parts__header-title">
+            <h2>Contact</h2>
         </div>
-
-        <!-- 本文 -->
-        <article class="article">
-            <div class="ContactForm7__contact">
-
-                <div class="ContactForm7__contact__title">
-                    お問い合わせフォーム
-                </div>
-
-                <div class="ContactForm7__contact__label">
-                    お名前<span>必須</span>
-                </div>
-                <input type="text">
-
-                <div class="ContactForm7__contact__label">
-                    メールアドレス<span>必須</span>
-                </div>
-                <input type="text">
-
-                <div class="ContactForm7__contact__label">
-                    お問い合わせ内容<span>必須</span>
-                </div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-
-                <div class="ContactForm7__contact__submit">
-                    <input type="submit" value="送信">
-                </div>
-
-            </div>
-        </article>
-
-
     </div>
-    <footer>
-        <!--PC用フッター画像-->
-        <img class="footer__img__pc" src="./img/footer_pc.png" alt="">
-        <!--スマホ用フッター画像-->
-        <img class="footer__img__sp" src="./img/footer_sp.png" alt="">
-    </footer>
 
+    <!-- 本文 -->
+    <article class="page-parts__article">
+        
+<div class="wp-block-contact-form-7-contact-form-selector"><div role="form" class="wpcf7" id="wpcf7-f21-p22-o1" lang="ja" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/techis_wordpress/contact/#wpcf7-f21-p22-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="21" />
+<input type="hidden" name="_wpcf7_version" value="5.5.6" />
+<input type="hidden" name="_wpcf7_locale" value="ja" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f21-p22-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="22" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<div class="ContactForm7-contact">
+<div class="ContactForm7-contact__title">
+        お問い合わせフォーム
+    </div>
+<div class="ContactForm7-contact__label">
+        お名前<span>必須</span>
+    </div>
+<p>    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></p>
+<div class="ContactForm7-contact__label">
+        メールアドレス<span>必須</span>
+        </div>
+<p>    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></p>
+<div class="ContactForm7-contact__label">
+        お問い合わせ内容<span>必須</span>
+    </div>
+<p>    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></textarea></span></p>
+<div class="ContactForm7-contact__submit"><input type="submit" value="送信" class="wpcf7-form-control has-spinner wpcf7-submit" /></div>
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div>
+
+
+
+    </article>
+        
+    <footer class="footer">
+        <p><small>Copyright TECHI.S.,Inc.</small></p>
+    </footer>
+    <script src="hamburger.js"></script>
 </body>
 
 </html>
