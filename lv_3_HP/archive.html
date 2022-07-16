@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>プログラミングスクール テックアイエス</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ロゴ画像">
+            </a>
+        </h1>
+        <ul class="menu-pc">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">News</a></li>
+            <!-- リンク先追加 -->
+            <li><a href="contact.html"><i class="fas fa-file-signature"></i>Contact</a></li>
+        </ul>
+        
+        <!-- 追加 -->
+        <div id="btn" class="hamburger__btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="menu" class="menu-sp"><!-- add-menu-sp 追加 -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="contact.html"><i class="fas fa-file-signature"></i>Contact</a></li>
+        </ul>
+        <div id="modal" class="modal-sp"></div><!-- add-modal-sp 追加 -->
+        <!-- 追加 -->
+    </header>
+    <main>
+        <div class="page-parts__header">
+            <!-- 画像 -->
+            <img width="375" height="207" src="img/page.png" class="attachment-full size-full wp-post-image" alt="" />        <!-- タイトル -->
+            <div class="page-parts__header-title">
+                <h2>News</h2>
+            </div>
+        </div>
+        <section class="archive-news">
+            <article class="archive-news__wrap">
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/10</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/09</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/08</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/07</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/06</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/05</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/04</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/03</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/02</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+                <a href="#">
+                <time datetime="2022-04-01">2022/04/01</time>
+                <h3>タイトルタイトルタイトル</h3>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <p><small>Copyright TECHI.S.,Inc.</small></p>
+    </footer>
+    <script src="hamburger.js"></script>
+</body>
+</html>

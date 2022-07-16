@@ -282,6 +282,39 @@ html, body {
 }
 .screen-reader-response{display: none;}
 
+/* 記事一覧 */
+/* news */
+.archive__title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .archive-news {
+    max-width: 1100px;
+    margin: 50px auto;
+  }
+  
+  .archive-news__wrap a {
+    display: flex;
+    padding: 20px 5%;
+    border-bottom: solid 1px #ddd;
+  }
+  
+  .archive-news__wrap a time {
+    font-size: 10px;
+    color: #888;
+    background-color: #eee;
+    margin: 0 50px;
+    padding: 5px;
+    border-radius: 50px;
+  }
+  
+  .archive-news__wrap h3 {
+    font-weight: bold;
+  }
+
 /* mobile */
 @media screen and (max-width: 768px) {
     /* header */
@@ -370,6 +403,74 @@ html, body {
     .ContactForm7-contact {
         margin: 15px;
     }
+
+     /* header */
+     .header {
+        margin: 0 30px;
+      }
+    
+      .menu-pc {
+        display: none;
+      }
+    
+      .hamburger__btn {
+        display: block;
+      }
+    
+      .hamburger__btn i {
+        color: #00abae;
+      }
+    
+      .add-menu-sp {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #ffffffdd;
+        display: block;
+        width: 70%;
+        height: 100vh;
+        padding: 20px 0;
+        z-index: 2;
+      }
+    
+      .add-menu-sp li {
+        font-weight: bold;
+        margin: 50px auto;
+        text-align: center;
+      }
+    
+      .add-menu-sp li:last-child a {
+        display: block;
+        color: #fff;
+        background: #00abae;
+        width: fit-content;
+        margin: auto;
+        padding: 10px 60px;
+        border-radius: 50px;
+      }
+    
+      .add-modal-sp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        background-color: #000000aa;
+        z-index: 1;
+      }
+    
+      /* news */
+      .archive-news__wrap a {
+        display: block;
+        padding: 20px 15px;
+      }
+    
+      .archive-news__wrap a time {
+        display: block;
+        width: fit-content;
+        margin: 20px 0;
+      }
     
 }
 
